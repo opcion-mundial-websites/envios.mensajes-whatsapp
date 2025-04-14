@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enviar a WhatsApp Opción Mundial</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="img/LOGO-FUNDACION-OPCION-MUNDIAL.png" type="image/x-icon">
+  <link rel="stylesheet" href="WhatsApp.css">
+  <meta name="theme-color" content="#25D3626" />
+</head>
+<body>
+
+  <button class="toggle-mode" onclick="toggleMode()">🌓</button>
+
+   
+
+  <div class="container">
+    <img style="width: 120px;" src="img/LOGO-FUNDACION-OPCION-MUNDIAL.png" alt="">
+    <h2>Enviar mensaje por WhatsApp</h2>
+    <div class="input-movimiento">
+    <input type="tel" id="telefono" placeholder="" required maxlength="13"/>
+    <label for="cedula">Número sin +57 (ej: 3001234567)</label>
+    </div>
+    <div class="error-msg" id="errorMsg">⚠️ El Número Debe tener al menos 10 dígitos.</div>
+    <button id="btnWhatsapp" class="whatsapp-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo WhatsApp">
+      Enviar a WhatsApp
+    </button>
+  </div>
+
+
+
+
+
+  <div class="modal" id="modalConfirm">
+    <div class="modal-content">
+      <h3>¿Enviar mensaje a este número?</h3>
+      <p id="modalNumero"></p>
+      <div class="loader" id="loader"></div>
+      <div class="modal-buttons">
+        <button class="cancel" onclick="cerrarModal()">Cancelar</button>
+        <button class="confirm" id="confirmarBtn">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+
+<script src="WhatsApp.js"></script>
+
+</body>
+</html>
